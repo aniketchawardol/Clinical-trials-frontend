@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import axios from "axios";
 
-const API_SERVER = "https://clinical-trials-backend-pkak.onrender.com/";
+const API_SERVER = "https://clinical-trials-backend-pkak.onrender.com";
 
 interface Message {
   id: string;

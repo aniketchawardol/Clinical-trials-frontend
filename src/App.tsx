@@ -5,7 +5,7 @@ import MapPanel from "./components/MapPanel";
 import SummaryPanel from "./components/SummaryPanel";
 import "maplibre-gl/dist/maplibre-gl.css";
 
-const API_SERVER = "https://clinical-trials-backend-pkak.onrender.com/";
+const API_SERVER = "https://clinical-trials-backend-pkak.onrender.com";
 
 function App() {
   const [geoJson, setGeoJson] = useState<any>({
