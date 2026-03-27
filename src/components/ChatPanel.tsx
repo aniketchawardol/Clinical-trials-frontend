@@ -40,12 +40,17 @@ export default function ChatPanel({ onGeoJsonUpdate }: ChatPanelProps) {
       role: "user",
       content: text,
     };
+    const chatHistory = [...messages, userMsg].map(({ role, content }) => ({
+      role,
+      content,
+    }));
     setMessages((prev) => [...prev, userMsg]);
     setInputValue("");
     setLoading(true);
 
     try {
       const response = await axios.post(`${API_SERVER}/api/chat`, {
+        messages: chatHistory,
         message: text,
       });
       const data = response.data;
